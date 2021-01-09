@@ -10,12 +10,30 @@ var orm = {
     });
     },
 
-    insertOne: function(table, col1, col2, val1, val2) {
+    insertOne: function( col1, col2, val1, val2) {
         var queryString = "INSERT INTO ?? (??, ??) VALUES (?,?)";
-        connection.query(queryString, [table, col1, col2, val1, val2], function(err, result) {
+        connection.query(queryString, ["burgers", col1, col2, val1, val2], function(err, result) {
             if (err) throw err;
             console.table(result);
     });
+    },
+
+    update: function(id, cb) {
+        var queryString = "UPDATE burgers";
+        // devoured = 1 WHERE id = ?
+        queryString += " SET ";
+        queryString += "devoured = 1";
+        queryString += " WHERE id = ";
+        queryString += id;
+    
+        console.log(queryString);
+        connection.query(queryString, function(err, result) {
+          if (err) {
+            throw err;
+          }
+    
+          cb(result);
+        });
     }
 
 }
