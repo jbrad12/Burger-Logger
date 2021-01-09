@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    background-color: rgb(252, 211, 99);
+}
+
+h2 {
+    color: rgb(204, 85, 85);
+}
+
+.left {
+    text-align: left;
+}
