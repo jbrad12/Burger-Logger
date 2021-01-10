@@ -1,23 +1,11 @@
-<h1>Burger App</h1>
+<h1>BURGER APP</h1>
 
-{{!-- 
+<div class="clearfix">
 <ul class="left">
-  {{#each burger}}
-  	<li>
-  		<p>{{this.burger_name}}</p>
-      
-
-      <button data-id="{{this.id}}" class="del">Delete</button>
-
-      
-  	</li>
-  {{/each}}
-</ul> --}}
-
-<ul class="left">
+    <h2>Burgers</h2>
   {{#each burger}}
     {{#unless devoured}}
-      <p>{{this.burger_name}}</p>
+      <li>{{this.burger_name}}</li>
       <button class="devour" data-id="{{this.id}}">
 		Devour
 	</button>
@@ -26,19 +14,22 @@
 </ul>
 
 <ul class="right">
+    <h2>Devoured</h2>
   {{#each burger}}
     {{#if devoured}}
-      <p>{{this.burger_name}}</p>
+      <li class="dev">{{this.burger_name}}</li>
     {{/if}}
   {{/each}}
 </ul>
+</div>
 
 
 
 <h2>Add a Burger</h2>
 
-<form action="/" method="POST">
-	<textarea type="text" name="burger"></textarea>
 
-	<button type="submit">Submit</button>
-</form>
+<textarea type="text" class="input" name="burger"></textarea>
+  <div>
+    <button class="submit" type="submit">Submit</button>
+  </div>
+

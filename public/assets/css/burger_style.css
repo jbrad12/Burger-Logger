@@ -5,12 +5,40 @@ body {
 
 h2 {
     color: rgb(204, 85, 85);
+    font-size: 35px;
 }
 
 .left {
-    text-align: left;
+    float: left;
+    width: auto;
+    margin-left: 25%;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .right {
-    text-align: right;
+    float: right;
+    width: auto;
+    margin-right: 25%;
 }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .dev {
+    text-decoration: line-through;
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0.5;
+  }
+
+  .submit {
+      width: 182px;
+  }
+
+   h1 {
+       font-size: 50px;
+   }

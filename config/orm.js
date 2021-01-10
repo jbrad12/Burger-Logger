@@ -14,7 +14,7 @@ var orm = {
         var queryString = "INSERT INTO ?? (??, ??) VALUES (?,?)";
         connection.query(queryString, ["burgers", col1, col2, val1, val2], function(err, result) {
             if (err) throw err;
-            console.table(result);
+          
     });
     },
 
