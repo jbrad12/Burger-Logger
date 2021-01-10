@@ -42,3 +42,8 @@ h2 {
    h1 {
        font-size: 50px;
    }
+
+   .burgerImg {
+       height: 400px;
+       width: 600px;
+   }
